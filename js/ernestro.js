@@ -13,8 +13,6 @@ if (!userId) {
     localStorage.setItem("userId", userId);
 };
 
-console.log("User ID: ", userId);
-
 function Admensagem(quem, texto) {
     const mensagem = document.createElement('div');
 
@@ -48,14 +46,11 @@ function Admensagem(quem, texto) {
     
     if (elementos.length > 0) {
         const primeiroElemento = elementos[elementos.length - 1];
-        console.log("Elemento analisado:", primeiroElemento);
     
         const numLinhas = contarLinhas(primeiroElemento);
-        console.log("Número de linhas:", numLinhas);
     
         if (numLinhas < 2) {
             primeiroElemento.classList.add("textoDireita");
-            console.log("Classe 'textoDireita' adicionada!");
         };
     };
     
@@ -77,7 +72,7 @@ async function SendMensagem() {
     userInput.value = '';
 
     try {
-        const response = await fetch("https://teste-bgju.onrender.com/chat", {
+        const response = await fetch("...", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -68,7 +68,6 @@ function nextForm(current) {
   
   document.addEventListener('keydown', (event) => {
     if (event.key === "Backspace") {
-      console.log("Formulário resetado.");
       localStorage.clear();
     }
   });
